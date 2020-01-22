@@ -1,9 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2041
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallpaperLoader", "WallpaperLoader.csproj", "{BBD53D0E-70BB-47F5-8EC8-4E086F87C038}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallpaperLoader", "WallpaperLoader.csproj", "{0FC5F3D4-09F9-44E8-A3E7-BD3DF4B4AFFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBD53D0E-70BB-47F5-8EC8-4E086F87C038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBD53D0E-70BB-47F5-8EC8-4E086F87C038}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBD53D0E-70BB-47F5-8EC8-4E086F87C038}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBD53D0E-70BB-47F5-8EC8-4E086F87C038}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4C1A8F73-91DD-45F4-BAED-BDCF67838725}
+		{0FC5F3D4-09F9-44E8-A3E7-BD3DF4B4AFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC5F3D4-09F9-44E8-A3E7-BD3DF4B4AFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC5F3D4-09F9-44E8-A3E7-BD3DF4B4AFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC5F3D4-09F9-44E8-A3E7-BD3DF4B4AFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

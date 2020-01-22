@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
+using System.Windows;
+using System.Windows.Markup;
 
 namespace WallpaperLoader
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         private const string InputPath = "AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets";
         private const string OutputPath = "Pictures\\Wallpapers";
@@ -28,14 +20,14 @@ namespace WallpaperLoader
         public MainWindow()
         {
             InitializeComponent();
-            var fullName = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
-            if (Environment.OSVersion.Version.Major >= 6) fullName = Directory.GetParent(fullName).ToString();
 
-            var inputStorage = new ImageStorage(System.IO.Path.Combine(fullName, InputPath), TypeFile);
-            var outputStorage = new ImageStorage(System.IO.Path.Combine(fullName, OutputPath), TypeFile);
-
-            new Replicator(inputStorage, outputStorage).Start();
+            string fullName = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
+            if (Environment.OSVersion.Version.Major >= 6)
+                fullName = Directory.GetParent(fullName).ToString();
+            string sourceDirectory = Path.Combine(fullName, "Pictures\\Wallpapers");
+            new Replicator(new ImageStorage(Path.Combine(fullName, "AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets"), "jpg"), new ImageStorage(sourceDirectory, "jpg")).Start();
             Application.Current.Shutdown();
+
         }
     }
 }
